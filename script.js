@@ -92,10 +92,10 @@ if (Math.abs(snakeX + box/2 - food.x) < box && Math.abs(snakeY + box/2 - food.y)
     document.getElementById("score").innerText = "Score: " + score;
     eatSound.play();
     food = randomFood();
-    if (score % 5 === 0 && speed > 50) {
+    if (score % 10 === 0 && speed > 50) {
       clearInterval(game);
       //بنزود السرعة عن طريق تقلييل الفاصل الزمني بين الرسومات
-      speed -= 10;
+      speed -= 1;
       // اللعبة بتبدأ تاني بالسرعة الجديدة بس دي حاجه سريعة مش بنلاحظها
       game = setInterval(draw, speed);
     }
